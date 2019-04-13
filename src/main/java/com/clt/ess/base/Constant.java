@@ -52,7 +52,6 @@ public class Constant {
     //存在CER和PFX证书
     public static final int FILE_STATE_CERANDPFX = 4;
 
-
     /**
      * 印章状态
      */
@@ -63,14 +62,6 @@ public class Constant {
     //暂停
     public static final int SEAL_STATE_PAUSE = 3;
 
-    /**
-     * 消息类别  驳回 1  注册 2  授权延期 3  证书延期4
-     */
-
-
-    /**
-     * 文件根路径
-     */
 //    public static final String ISSUERUNIT_ROOT_PATH = "D:/temp/issuerUnit/";
 //    public static final String ROOT_PATH = "D:/temp/";
     //linux
@@ -87,24 +78,20 @@ public class Constant {
     public static final String CER_ALGORITHM = "SHA1withRSA";
     public static final String CER_CLASS = "签章证书";
     public static final String CER_VERSION = "V3";
-
     //顶级单位层级,多个单位(公司)使用同一套系统时,该值需要修改为0
     public static final int topUnitLevel=1;
     //每个公司的层级 一级单位的层级
     public static final int  companyLevel=1;
-
     /**
      * 附件临时地址
      */
 //    public static final String ATTACHMENT_PATH = "/usr/esstempfile/attachment/";
     public static final String ATTACHMENT_PATH = "E:\\temp\\attachment\\";
-
     /**
      * 解析pfx 证书的临时地址
      */
 //    public static final String PFX_FILE_PATH = "/usr/esstempfile/pfxTemp/";
     public static final String PFX_FILE_PATH = "E:\\temp\\pfxTemp/";
-
     /**
      * 消息中心 消息类别
      */
