@@ -40,7 +40,7 @@
 		<!-- 配置登陆拦截器 -->
 		<mvc:interceptor>
 			<!-- /** 表示所有的url，包括子url路径 -->
-			<mvc:mapping path="/*.html"/>
+			<mvc:mapping path="*.html"/>
 			<bean class="com.clt.ess.base.EssInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
