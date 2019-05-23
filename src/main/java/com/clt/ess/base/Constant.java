@@ -1,6 +1,41 @@
 package com.clt.ess.base;
 
+import java.io.InputStream;
+import java.util.Iterator;
+import java.util.Properties;
+
 public class Constant {
+
+
+    static {
+        Properties prop = new Properties();
+        try{
+            //读取属性文件a.properties
+            InputStream in = Constant.class.getClassLoader().getResource("config.properties").openStream();
+            prop.load(in);     ///加载属性列表
+            Iterator<String> it=prop.stringPropertyNames().iterator();
+            while(it.hasNext()){
+                String key=it.next();
+                switch (key){
+                    case "ATTACHMENT_PATH":
+                        ATTACHMENT_PATH =prop.getProperty(key);
+                        continue;
+                    case "PFX_FILE_PATH":
+                        PFX_FILE_PATH =prop.getProperty(key);
+                        continue;
+                    default:break;
+                }
+            }
+            in.close();
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+    }
+
+
+
+
     //系统一级单位 区号
     public static final String JIANGSU_CODE = "025";
 
@@ -86,12 +121,12 @@ public class Constant {
      * 附件临时地址
      */
 //    public static final String ATTACHMENT_PATH = "/usr/esstempfile/attachment/";
-    public static final String ATTACHMENT_PATH = "E:\\temp\\attachment\\";
+    public static String ATTACHMENT_PATH ;
     /**
      * 解析pfx 证书的临时地址
      */
 //    public static final String PFX_FILE_PATH = "/usr/esstempfile/pfxTemp/";
-    public static final String PFX_FILE_PATH = "E:\\temp\\pfxTemp/";
+    public static String PFX_FILE_PATH ;
     /**
      * 消息中心 消息类别
      */

@@ -1151,7 +1151,7 @@ public class MakeController {
         certificate.setCerName(certName);
 
         //设置证书的颁发者单位
-        certificate.setIssuerUnitId("003");
+        certificate.setIssuerUnitId("004");
         //手签 自己生成证书 证书起始时间 根据印章起始时间决定
         certificate.setStartTime("2019-04-01");
         certificate.setEndTime("2024-04-01");

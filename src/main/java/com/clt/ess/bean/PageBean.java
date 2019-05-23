@@ -17,8 +17,6 @@ public class PageBean<T> {
     private int pagePrevious;
     private int pageNext;
 
-
-
     //将每页要显示的数据放在list集合中
     private List<T> list;
 
